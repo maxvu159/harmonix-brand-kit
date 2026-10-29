@@ -1,0 +1,215 @@
+/* ============================================================
+   Harmonix Design System — Colors & Type
+   Pulled from harmonix-app (Next.js, dark UI), harmonix-web
+   (Remix, light marketing), and the New DS Figma file.
+   ============================================================ */
+
+/* ----------------------------- Fonts ----------------------------- */
+@font-face { font-family: "Aeonik"; src: url("./fonts/Aeonik-Air.otf") format("opentype"); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: "Aeonik"; src: url("./fonts/Aeonik-AirItalic.otf") format("opentype"); font-weight: 200; font-style: italic; font-display: swap; }
+@font-face { font-family: "Aeonik"; src: url("./fonts/Aeonik-Thin.otf") format("opentype"); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: "Aeonik"; src: url("./fonts/Aeonik-ThinItalic.otf") format("opentype"); font-weight: 100; font-style: italic; font-display: swap; }
+@font-face { font-family: "Aeonik"; src: url("./fonts/Aeonik-Light.otf") format("opentype"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Aeonik"; src: url("./fonts/Aeonik-LightItalic.otf") format("opentype"); font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: "Aeonik"; src: url("./fonts/Aeonik-Regular.otf") format("opentype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Aeonik"; src: url("./fonts/Aeonik-RegularItalic.otf") format("opentype"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Aeonik"; src: url("./fonts/Aeonik-Medium.otf") format("opentype"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Aeonik"; src: url("./fonts/Aeonik-MediumItalic.otf") format("opentype"); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: "Aeonik"; src: url("./fonts/Aeonik-Bold.otf") format("opentype"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Aeonik"; src: url("./fonts/Aeonik-BoldItalic.otf") format("opentype"); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: "Aeonik"; src: url("./fonts/Aeonik-Black.otf") format("opentype"); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Aeonik"; src: url("./fonts/Aeonik-BlackItalic.otf") format("opentype"); font-weight: 900; font-style: italic; font-display: swap; }
+
+/* Web fallbacks pulled in by the existing Remix/Next codebases */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Geist:wght@400;500;600;700&family=Lato:wght@300;400;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root {
+  /* ===================== Brand ===================== */
+  --hmn-green:           #173132;  /* primary deep teal-green — bg in dark UI, ink in light UI */
+  --hmn-green-deep:      #032620;  /* "Hip-3 vaults" deeper teal used in app banners */
+  --hmn-green-ink:       #0F2122;  /* darkest surface (NextUI dark.background) */
+  --hmn-green-900:       #0C191A;
+  --hmn-green-700:       #1C3B3C;
+  --hmn-green-600:       #173132;
+  --hmn-yellow:          #E2F6A1;  /* secondary — lime/light yellow */
+  --hmn-yellow-soft:     #F8FEDA;  /* y20 — backgrounds, hover, surfaces */
+  --hmn-cream:           #F1F1EB;  /* off-white — page bg on marketing site */
+  --hmn-mint:            #97FCE4;  /* gradient companion */
+  --hmn-mint-soft:       #CDEECE;  /* hero glow */
+  --hmn-leaf:            #58BF6E;  /* hero gradient anchor */
+
+  /* ===================== Neutrals ===================== */
+  --hmn-ink:             #171918;  /* dark-green text on light surfaces */
+  --hmn-zinc-950:        #09090B;
+  --hmn-zinc-900:        #18181B;
+  --hmn-zinc-800:        #27272A;
+  --hmn-zinc-700:        #3F3F46;
+  --hmn-zinc-500:        #71717A;  /* grey02 — secondary text */
+  --hmn-zinc-400:        #84889A;  /* sub-title — captions */
+  --hmn-zinc-300:        #E4E4E7;  /* base-border */
+  --hmn-zinc-200:        #F4F4F5;  /* accent surface */
+  --hmn-zinc-100:        #F5F6F6;  /* grey01 */
+  --hmn-white:           #FFFFFF;
+
+  /* ===================== Status ===================== */
+  --hmn-success:         #0ECB81;  /* green — APY/PnL+ */
+  --hmn-success-soft:    #DAF4EC;
+  --hmn-danger:          #8F2C2C;  /* warning panels */
+  --hmn-warning:         #E2F6A1;  /* NextUI maps warning → yellow */
+  --hmn-info:            #076EDE;  /* highlight blue */
+  --hmn-info-soft:       #E6F1FE;
+
+  /* ===================== Partner accents (vault cards) ===================== */
+  --hmn-partner-options:     #FFAF1D;
+  --hmn-partner-delta:       #627EEA;
+  --hmn-partner-renzo:       #ACE730;
+  --hmn-partner-kelpdao:     #075A5A;
+  --hmn-partner-base:        #437BFF;
+  --hmn-partner-solv:        #B080FF;
+  --hmn-partner-pendle:      #B4B4B8;
+  --hmn-partner-goldlink:    #7F56D9;
+  --hmn-partner-rethink:     #1F5FFF;
+  --hmn-partner-hyperliquid: #50D2C1;
+
+  /* ===================== Semantic — light UI (marketing) ===================== */
+  --bg:          var(--hmn-cream);
+  --bg-elevated: #FFFFFF;
+  --bg-muted:    #F7F8FB;
+  --fg:          var(--hmn-ink);
+  --fg-muted:    #666D80;        /* sub-title-2 */
+  --fg-subtle:   var(--hmn-zinc-400);
+  --border:      var(--hmn-zinc-300);
+  --border-soft: var(--hmn-cream);
+  --accent:      var(--hmn-yellow);
+  --accent-fg:   var(--hmn-green);
+
+  /* ===================== Semantic — dark UI (app) ===================== */
+  --d-bg:          var(--hmn-green-ink);   /* 0F2122 */
+  --d-bg-elevated: #07161D;                /* g80 — sidebar */
+  --d-bg-card:     #0B1E24;                /* g70 — total-assets card */
+  --d-bg-deep:     #032620;                /* g60+ teal header */
+  --d-bg-row:      #10272B;                /* g60 — hover */
+  --d-bg-soft:     #1D3637;                /* g50 — chip */
+  --d-fg:          #FAFAFA;
+  --d-fg-muted:    rgba(255,255,255,0.7);
+  --d-fg-subtle:   rgba(255,255,255,0.4);
+  --d-border:      #303341;
+  --d-accent:      var(--hmn-yellow);
+
+  /* ===================== Spacing scale ===================== */
+  --space-0:  0;
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* ===================== Radii ===================== */
+  --radius-xs:    4px;
+  --radius-sm:    8px;
+  --radius-md:    12px;
+  --radius-lg:    16px;        /* default card radius */
+  --radius-xl:    24px;        /* large containers */
+  --radius-2xl:   32px;        /* hero, section blocks */
+  --radius-3xl:   49px;        /* tablet mockup mock */
+  --radius-pill:  9999px;      /* buttons, pills */
+  --radius-icon:  13.13px;     /* logo-mark container radius */
+
+  /* ===================== Elevation ===================== */
+  --shadow-xs:   0 1px 2px rgba(0,0,0,0.05);
+  --shadow-sm:   0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md:   0 4px 12px rgba(0,0,0,0.06);
+  --shadow-lg:   0 12px 32px rgba(0,0,0,0.10);
+  --shadow-card: 0 2px 8px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-glow-yellow: 0 0 86px rgba(226,246,161,0.45);
+  --shadow-glow-green:  0 0 96px rgba(23,49,50,0.35);
+  /* Stylized "cube" drop used on vault cards (see globals.css .vault-card) */
+  --vault-card-depth: 10px;
+
+  /* ===================== Type — base ===================== */
+  --font-display: "Aeonik", "Outfit", "Geist", system-ui, sans-serif;     /* hero, brand statements */
+  --font-sans:    "Aeonik", "Poppins", "Inter", system-ui, sans-serif;    /* body, UI */
+  --font-ui:      "Poppins", "Inter", system-ui, sans-serif;              /* app dashboard (Next) */
+  --font-marketing: "Outfit", "Poppins", "Lato", system-ui, sans-serif;   /* web/marketing */
+  --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --leading-tight:  1.1;
+  --leading-snug:   1.25;
+  --leading-normal: 1.5;
+  --leading-loose:  1.75;
+
+  --tracking-tight: -0.02em;
+  --tracking-snug:  -0.01em;
+  --tracking-wide:   0.04em;
+
+  /* ===================== Type — scale ===================== */
+  --fs-12:  12px;
+  --fs-14:  14px;
+  --fs-16:  16px;
+  --fs-18:  18px;
+  --fs-20:  20px;
+  --fs-24:  24px;
+  --fs-30:  30px;
+  --fs-36:  36px;
+  --fs-40:  40px;
+  --fs-48:  48px;
+  --fs-60:  60px;
+  --fs-64:  64px;
+  --fs-72:  72px;
+
+  /* ===================== Transitions ===================== */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast:    150ms;
+  --dur-base:    250ms;
+  --dur-slow:    500ms;
+}
+
+/* ----------------------------- Semantic typography ----------------------------- */
+.hmn-display-1 { font-family: var(--font-display); font-weight: 500; font-size: var(--fs-72); line-height: var(--leading-tight); letter-spacing: var(--tracking-tight); color: var(--fg); }
+.hmn-display-2 { font-family: var(--font-display); font-weight: 500; font-size: var(--fs-60); line-height: var(--leading-tight); letter-spacing: var(--tracking-tight); color: var(--fg); }
+.hmn-h1        { font-family: var(--font-display); font-weight: 600; font-size: var(--fs-48); line-height: var(--leading-tight); letter-spacing: var(--tracking-snug); color: var(--fg); }
+.hmn-h2        { font-family: var(--font-display); font-weight: 500; font-size: var(--fs-40); line-height: 1.15; letter-spacing: var(--tracking-snug); color: var(--fg); }
+.hmn-h3        { font-family: var(--font-sans);    font-weight: 600; font-size: var(--fs-30); line-height: var(--leading-snug); color: var(--fg); }
+.hmn-h4        { font-family: var(--font-sans);    font-weight: 600; font-size: var(--fs-24); line-height: var(--leading-snug); color: var(--fg); }
+.hmn-h5        { font-family: var(--font-sans);    font-weight: 600; font-size: var(--fs-20); line-height: var(--leading-snug); color: var(--fg); }
+.hmn-h6        { font-family: var(--font-sans);    font-weight: 600; font-size: var(--fs-18); line-height: var(--leading-snug); color: var(--fg); }
+.hmn-body-lg   { font-family: var(--font-sans);    font-weight: 400; font-size: var(--fs-18); line-height: var(--leading-normal); color: var(--fg); }
+.hmn-body      { font-family: var(--font-sans);    font-weight: 400; font-size: var(--fs-16); line-height: var(--leading-normal); color: var(--fg); }
+.hmn-body-sm   { font-family: var(--font-sans);    font-weight: 400; font-size: var(--fs-14); line-height: var(--leading-normal); color: var(--fg); }
+.hmn-caption   { font-family: var(--font-sans);    font-weight: 400; font-size: var(--fs-12); line-height: var(--leading-normal); color: var(--fg-muted); }
+.hmn-overline  { font-family: var(--font-sans);    font-weight: 500; font-size: var(--fs-12); line-height: 1; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--fg-subtle); }
+.hmn-data      { font-family: var(--font-sans);    font-weight: 600; font-size: var(--fs-24); line-height: 1; letter-spacing: var(--tracking-tight); color: var(--fg); font-variant-numeric: tabular-nums; }
+.hmn-data-lg   { font-family: var(--font-display); font-weight: 500; font-size: var(--fs-48); line-height: 1; letter-spacing: var(--tracking-tight); color: var(--fg); font-variant-numeric: tabular-nums; }
+.hmn-mono      { font-family: var(--font-mono);    font-size: var(--fs-14); }
+
+/* ----------------------------- Gradients ----------------------------- */
+.hmn-bg-blend {
+  background:
+    linear-gradient(300deg, rgba(241,240,235,0.5) 7.75%, rgba(88,191,110,0.5) 92.25%),
+    linear-gradient(300deg, rgba(241,240,235,0.5) 7.75%, rgba(226,246,161,0.5) 92.25%),
+    var(--hmn-cream);
+  background-blend-mode: soft-light, hue, normal;
+}
+.hmn-bg-hero-glow {
+  background:
+    radial-gradient(60% 40% at 50% 100%, rgba(205,238,206,0.9) 0%, rgba(241,240,235,0.0) 60%),
+    var(--hmn-cream);
+}
+.hmn-grad-line {
+  background: linear-gradient(109deg, var(--hmn-mint) -1.94%, var(--hmn-yellow) 101.26%);
+}
+.hmn-text-grad {
+  background: linear-gradient(180deg, var(--hmn-ink) 2.78%, rgba(23,25,24,0) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

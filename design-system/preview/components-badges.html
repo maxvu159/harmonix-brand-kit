@@ -1,0 +1,49 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><title>Components · Badges & pills</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .stack { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .pill { padding: 5px 10px; border-radius: 9999px; font: 500 12px/1.2 "Aeonik", sans-serif; display: inline-flex; align-items: center; gap: 6px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .live    { background: rgba(14,203,129,0.12); color: #0A6F46; }
+  .live .dot { background: #0ECB81; box-shadow: 0 0 0 3px rgba(14,203,129,0.18); }
+  .draft   { background: var(--hmn-zinc-200); color: var(--hmn-zinc-500); }
+  .draft .dot { background: var(--hmn-zinc-500); }
+  .closed  { background: rgba(143,44,44,0.10); color: #8F2C2C; }
+  .closed .dot { background: #8F2C2C; }
+  .apy     { background: var(--hmn-green); color: var(--hmn-yellow); padding: 6px 12px; font-weight: 600; }
+  .strategy{ background: #E6F1FE; color: #0B4F9F; }
+  .partner { background: var(--hmn-yellow); color: var(--hmn-green); }
+  .chain   { padding: 4px 8px 4px 4px; background: var(--hmn-zinc-200); color: var(--fg); border-radius: 9999px; font-size: 12px; display: inline-flex; align-items: center; gap: 6px; }
+  .chain .ic { width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg, #50D2C1, #2DAB97); }
+  .row-sec { display: flex; flex-direction: column; gap: 10px; }
+  .row-lbl { font-size: 10px; color: var(--fg-subtle); text-transform: uppercase; letter-spacing: 0.04em; font-family: var(--font-mono); }
+</style></head>
+<body>
+<div class="card">
+  <div class="row" style="justify-content:space-between">
+    <div class="label">Badges, pills & chips</div>
+    <div class="meta">components</div>
+  </div>
+  <div class="row-sec">
+    <div class="row-lbl">Status</div>
+    <div class="stack">
+      <span class="pill live"><span class="dot"></span>Live</span>
+      <span class="pill live"><span class="dot"></span>Open</span>
+      <span class="pill draft"><span class="dot"></span>Coming soon</span>
+      <span class="pill closed"><span class="dot"></span>Closed</span>
+    </div>
+  </div>
+  <div class="row-sec">
+    <div class="row-lbl">Data &amp; tags</div>
+    <div class="stack">
+      <span class="pill apy">10.68% APY</span>
+      <span class="pill strategy">Delta neutral</span>
+      <span class="pill strategy">Option wheel</span>
+      <span class="pill partner">Hyperliquid</span>
+      <span class="chain"><span class="ic"></span>HyperEVM</span>
+      <span class="chain"><span class="ic" style="background:linear-gradient(135deg,#627EEA,#3650A0)"></span>Ethereum</span>
+    </div>
+  </div>
+</div>
+</body></html>

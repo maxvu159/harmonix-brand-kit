@@ -1,0 +1,10 @@
+# licensed fonts: never commit
+*.otf
+*.ttf
+*.woff
+*.woff2
+*.fig
+*.zip
+node_modules/
+out/
+.DS_Store

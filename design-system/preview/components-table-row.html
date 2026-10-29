@@ -1,0 +1,49 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><title>Components · Table row</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .table { background: white; border-radius: var(--radius-md); border: 1px solid var(--border); overflow: hidden; }
+  .thead, .tr { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 110px; gap: 12px; padding: 12px 16px; align-items: center; font-size: 13px; }
+  .thead { background: #FAFAF8; color: var(--fg-muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 500; font-family: var(--font-mono); }
+  .tr { border-top: 1px solid var(--border); }
+  .tr:hover { background: var(--hmn-yellow-soft); }
+  .name { display: flex; align-items: center; gap: 10px; font-weight: 500; }
+  .ic { width: 28px; height: 28px; border-radius: 9999px; display: flex; align-items: center; justify-content: center; color: white; font-size: 11px; font-weight: 600; }
+  .num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+  .apy { color: #0A6F46; font-weight: 600; }
+  .btn { padding: 6px 14px; border-radius: 9999px; background: var(--hmn-green); color: var(--hmn-yellow); font-weight: 500; font-size: 12px; border: 0; cursor: pointer; }
+</style></head>
+<body>
+<div class="card" style="background:#FAFAF8">
+  <div class="row" style="justify-content:space-between">
+    <div class="label">Vault list · table row</div>
+    <div class="meta">components</div>
+  </div>
+  <div class="table">
+    <div class="thead">
+      <span>Vault</span><span>APY</span><span>TVL</span><span>Strategy</span><span></span>
+    </div>
+    <div class="tr">
+      <div class="name"><div class="ic" style="background:#627EEA">Δ</div><div class="col"><span>Delta Neutral</span><span style="font-size:11px;color:var(--fg-subtle)">ETH · 7d lock</span></div></div>
+      <span class="num apy">10.68%</span>
+      <span class="num">$8.2M</span>
+      <span style="font-size:12px;color:var(--fg-muted)">perp-funding</span>
+      <button class="btn">Deposit</button>
+    </div>
+    <div class="tr">
+      <div class="name"><div class="ic" style="background:#FFAF1D">O</div><div class="col"><span>Option Wheel</span><span style="font-size:11px;color:var(--fg-subtle)">ETH · 14d lock</span></div></div>
+      <span class="num apy">14.20%</span>
+      <span class="num">$4.6M</span>
+      <span style="font-size:12px;color:var(--fg-muted)">covered call</span>
+      <button class="btn">Deposit</button>
+    </div>
+    <div class="tr">
+      <div class="name"><div class="ic" style="background:#50D2C1">H</div><div class="col"><span>HYPE Delta Neutral</span><span style="font-size:11px;color:var(--fg-subtle)">$HYPE · 0d lock</span></div></div>
+      <span class="num apy">8.42%</span>
+      <span class="num">$12.1M</span>
+      <span style="font-size:12px;color:var(--fg-muted)">basis trade</span>
+      <button class="btn">Deposit</button>
+    </div>
+  </div>
+</div>
+</body></html>

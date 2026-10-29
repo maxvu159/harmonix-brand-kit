@@ -1,0 +1,47 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><title>Brand · Logo marks</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .marks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .mark {
+    aspect-ratio: 1;
+    border-radius: var(--radius-md);
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--border);
+  }
+  .mark img { width: 56%; height: 56%; object-fit: contain; }
+  .mark.dk { background: var(--hmn-green); border-color: transparent; }
+  .mark.yl { background: var(--hmn-yellow); border-color: transparent; }
+  .mark.cr { background: var(--hmn-cream); border-color: var(--border); }
+  .mark.wh { background: var(--hmn-white); }
+  .cap { text-align: center; font-size: 11px; color: var(--fg-subtle); font-family: var(--font-mono); }
+  .grouped { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+</style></head>
+<body>
+<div class="card">
+  <div class="row" style="justify-content:space-between">
+    <div class="label">Logo marks · 4 colorways</div>
+    <div class="meta">brand</div>
+  </div>
+  <div class="grouped">
+    <div class="col" style="gap:8px">
+      <div class="marks">
+        <div class="mark dk"><img src="../assets/logos/hmn-logo-square-yellow.svg"/></div>
+        <div class="mark yl"><img src="../assets/logos/hmn-logo-square-green.svg"/></div>
+        <div class="mark cr"><img src="../assets/logos/hmn-logo-square-green.svg"/></div>
+        <div class="mark wh"><img src="../assets/logos/hmn-logo-square-black.svg"/></div>
+      </div>
+      <div class="cap">square · radius 0</div>
+    </div>
+    <div class="col" style="gap:8px">
+      <div class="marks">
+        <div class="mark dk"><img src="../assets/logos/hmn-logo-circle-yellow.svg"/></div>
+        <div class="mark yl"><img src="../assets/logos/hmn-logo-circle-green.svg"/></div>
+        <div class="mark cr"><img src="../assets/logos/hmn-logo-circle-green.svg"/></div>
+        <div class="mark wh"><img src="../assets/logos/hmn-logo-circle-black.svg"/></div>
+      </div>
+      <div class="cap">rounded · radius 26.5%</div>
+    </div>
+  </div>
+</div>
+</body></html>

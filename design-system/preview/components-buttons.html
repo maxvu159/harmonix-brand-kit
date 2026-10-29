@@ -1,0 +1,63 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><title>Components · Buttons</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .bg-light { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; }
+  .bg-dark  { background: var(--hmn-green); border-radius: var(--radius-md); padding: 18px; }
+  .stack { display: flex; flex-wrap: wrap; gap: 8px; }
+  .btn { padding: 0 18px; height: 40px; border-radius: 9999px; border: 1px solid transparent; font: 500 14px/1 "Aeonik", sans-serif; cursor: pointer; transition: all .2s; display: inline-flex; align-items: center; gap: 6px; }
+  .btn-primary  { background: var(--hmn-green); color: var(--hmn-yellow); }
+  .btn-primary:hover { background: #0F2122; }
+  .btn-accent   { background: var(--hmn-yellow); color: var(--hmn-green); }
+  .btn-accent:hover { box-shadow: 0 0 0 4px rgba(226,246,161,0.35); }
+  .btn-outline  { background: transparent; color: var(--hmn-green); border-color: var(--hmn-green); }
+  .btn-outline:hover { background: var(--hmn-yellow); border-color: var(--hmn-yellow); }
+  .btn-ghost    { background: transparent; color: var(--hmn-green); }
+  .btn-ghost:hover { background: var(--hmn-yellow-soft); }
+  .btn-dark-prim { background: var(--hmn-yellow); color: var(--hmn-green); }
+  .btn-dark-out  { background: transparent; color: #fff; border-color: rgba(255,255,255,0.3); }
+  .btn-dark-out:hover { border-color: var(--hmn-yellow); color: var(--hmn-yellow); }
+  .btn-dark-ghost { background: transparent; color: rgba(255,255,255,0.85); }
+  .btn-dark-ghost:hover { background: #10272B; color: var(--hmn-yellow); }
+  .btn-sm { height: 32px; padding: 0 14px; font-size: 13px; }
+  .btn-lg { height: 48px; padding: 0 22px; font-size: 16px; }
+  .lbl { font-size: 10px; color: var(--fg-subtle); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; font-family: var(--font-mono); }
+  .bg-dark .lbl { color: rgba(255,255,255,0.4); }
+</style></head>
+<body>
+<div class="card">
+  <div class="row" style="justify-content:space-between">
+    <div class="label">Buttons · primary / accent / outline / ghost</div>
+    <div class="meta">components</div>
+  </div>
+  <div class="grid">
+    <div class="bg-light">
+      <div class="lbl">on light</div>
+      <div class="stack">
+        <button class="btn btn-primary">Launch App</button>
+        <button class="btn btn-accent">Deposit</button>
+        <button class="btn btn-outline">Get in touch</button>
+        <button class="btn btn-ghost">Cancel</button>
+      </div>
+      <div class="stack" style="margin-top:10px">
+        <button class="btn btn-primary btn-sm">Small</button>
+        <button class="btn btn-primary">Default</button>
+        <button class="btn btn-primary btn-lg">Large</button>
+      </div>
+    </div>
+    <div class="bg-dark">
+      <div class="lbl">on dark</div>
+      <div class="stack">
+        <button class="btn btn-dark-prim">Deposit</button>
+        <button class="btn btn-dark-out">Withdraw</button>
+        <button class="btn btn-dark-ghost">Approve</button>
+      </div>
+      <div class="stack" style="margin-top:10px">
+        <button class="btn btn-dark-prim btn-sm">Connect wallet</button>
+        <button class="btn btn-dark-prim btn-lg">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

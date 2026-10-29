@@ -1,0 +1,29 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><title>Spacing · scale</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .row-sp { display: grid; grid-template-columns: 60px 1fr 70px; gap: 14px; align-items: center; }
+  .row-sp .tk { font-family: var(--font-mono); font-size: 11px; color: var(--fg-subtle); }
+  .row-sp .px { font-family: var(--font-mono); font-size: 11px; color: var(--fg-muted); text-align: right; }
+  .bar { background: var(--hmn-green); height: 12px; border-radius: 2px; }
+  .bar.acc { background: var(--hmn-yellow); }
+</style></head>
+<body>
+<div class="card">
+  <div class="row" style="justify-content:space-between">
+    <div class="label">Spacing scale · 4px base</div>
+    <div class="meta">spacing</div>
+  </div>
+  <div class="col" style="gap:8px">
+    <div class="row-sp"><span class="tk">space-1</span><span class="bar" style="width:4px"></span><span class="px">4</span></div>
+    <div class="row-sp"><span class="tk">space-2</span><span class="bar" style="width:8px"></span><span class="px">8</span></div>
+    <div class="row-sp"><span class="tk">space-3</span><span class="bar" style="width:12px"></span><span class="px">12</span></div>
+    <div class="row-sp"><span class="tk">space-4</span><span class="bar" style="width:16px"></span><span class="px">16</span></div>
+    <div class="row-sp"><span class="tk">space-6</span><span class="bar" style="width:24px"></span><span class="px">24</span></div>
+    <div class="row-sp"><span class="tk">space-8</span><span class="bar acc" style="width:32px"></span><span class="px">32</span></div>
+    <div class="row-sp"><span class="tk">space-12</span><span class="bar" style="width:48px"></span><span class="px">48</span></div>
+    <div class="row-sp"><span class="tk">space-16</span><span class="bar" style="width:64px"></span><span class="px">64</span></div>
+    <div class="row-sp"><span class="tk">space-24</span><span class="bar acc" style="width:96px"></span><span class="px">96</span></div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><title>Type · Data numerics</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .stat {
+    padding: 18px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .stat .lbl {
+    font-family: "Aeonik", sans-serif;
+    font-size: 11px;
+    color: var(--fg-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+  }
+  .stat .num {
+    font-family: "Aeonik", sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--fg);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+  .stat .delta {
+    font-family: "Aeonik", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #0A6F46;
+    margin-top: 1px;
+  }
+  .stat.dark { background: var(--hmn-green); border-color: transparent; }
+  .stat.dark .lbl { color: rgba(226,246,161,0.7); }
+  .stat.dark .num { color: var(--hmn-yellow); }
+  .stat.dark .delta { color: #6FE5A2; }
+</style></head>
+<body>
+<div class="card">
+  <div class="row" style="justify-content:space-between">
+    <div class="label">Numeric specimens · Aeonik Medium · tabular-nums</div>
+    <div class="meta">type · data</div>
+  </div>
+  <div class="grid3">
+    <div class="stat">
+      <div class="lbl">7d APY</div>
+      <div class="num">10.68%</div>
+      <div class="delta">+0.42 since yesterday</div>
+    </div>
+    <div class="stat">
+      <div class="lbl">TVL</div>
+      <div class="num">$12.4M</div>
+      <div class="delta">+$248k · 24h</div>
+    </div>
+    <div class="stat dark">
+      <div class="lbl">Your balance</div>
+      <div class="num">$1,284.50</div>
+      <div class="delta">+12.84 USDC earned</div>
+    </div>
+  </div>
+</div>
+</body></html>

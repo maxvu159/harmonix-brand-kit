@@ -1,0 +1,42 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><title>Components · Inputs</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: end; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label { font-size: 12px; color: var(--fg-muted); font-weight: 500; }
+  .ip { height: 44px; border-radius: var(--radius-md); padding: 0 14px; border: 1px solid var(--border); background: #fff; font: 400 15px/1 "Aeonik", sans-serif; color: var(--fg); transition: border-color .15s, box-shadow .15s; }
+  .ip:focus { outline: none; border-color: var(--hmn-green); box-shadow: 0 0 0 4px rgba(23,49,50,0.08); }
+  .amount { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border: 1px solid var(--border); border-radius: var(--radius-md); background: #fff; }
+  .amount input { border: 0; outline: 0; font: 600 24px/1 "Aeonik", sans-serif; color: var(--fg); width: 100%; font-variant-numeric: tabular-nums; }
+  .amount .max { font: 500 11px/1 "Aeonik"; color: var(--hmn-green); background: var(--hmn-yellow); padding: 4px 8px; border-radius: 9999px; cursor: pointer; }
+  .amount .tok { display: flex; align-items: center; gap: 6px; padding: 6px 10px 6px 6px; background: var(--hmn-zinc-200); border-radius: 9999px; font-weight: 500; font-size: 13px; }
+  .amount .tok .dot { width: 20px; height: 20px; background: linear-gradient(135deg, #2775CA, #0F4FA8); border-radius: 50%; }
+  .hint { font-size: 11px; color: var(--fg-subtle); display: flex; justify-content: space-between; }
+</style></head>
+<body>
+<div class="card">
+  <div class="row" style="justify-content:space-between">
+    <div class="label">Form inputs · text & amount</div>
+    <div class="meta">components</div>
+  </div>
+  <div class="grid2">
+    <div class="field">
+      <label>Wallet address</label>
+      <input class="ip" placeholder="0x…" value="0x7a2b…F4a1"/>
+      <div class="hint"><span>Optional</span><span>42/42</span></div>
+    </div>
+    <div class="field">
+      <label>Deposit amount</label>
+      <div class="amount">
+        <input value="1,000.00"/>
+        <div class="row" style="gap:8px">
+          <span class="max">MAX</span>
+          <span class="tok"><span class="dot"></span>USDC</span>
+        </div>
+      </div>
+      <div class="hint"><span>Balance: 4,201.85 USDC</span><span>≈ $1,000.00</span></div>
+    </div>
+  </div>
+</div>
+</body></html>

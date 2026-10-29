@@ -1,0 +1,49 @@
+/* preview/_card.css — shared base for all design-system preview cards */
+@import url("../colors_and_type.css");
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  font-family: var(--font-sans);
+  color: var(--fg);
+  background: #FAFAF8;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+.card {
+  width: 100%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.card.dark {
+  background: var(--d-bg);
+  border-color: var(--d-border);
+  color: var(--d-fg);
+}
+.row { display: flex; align-items: center; gap: 12px; }
+.col { display: flex; flex-direction: column; }
+.grid { display: grid; }
+.meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0;
+  color: var(--fg-subtle);
+}
+.label {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--fg-muted);
+  letter-spacing: 0.02em;
+}
+.dark .meta, .dark .label { color: var(--d-fg-subtle); }

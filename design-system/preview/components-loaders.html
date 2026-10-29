@@ -1,0 +1,38 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><title>Components · Loaders</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center; padding: 10px 0; }
+  .panel { padding: 24px; border-radius: var(--radius-md); border: 1px solid var(--border); background: #fff; display: flex; flex-direction: column; gap: 12px; align-items: center; }
+  .panel.dk { background: var(--hmn-green); border: 0; color: var(--hmn-yellow); }
+  .wave { display: flex; gap: 6px; height: 20px; align-items: center; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(90deg, #173132, #6f719d); animation: wv 1s linear infinite; }
+  .dk .dot { background: var(--hmn-yellow); }
+  .dot:nth-child(2){animation-delay:.1s} .dot:nth-child(3){animation-delay:.2s} .dot:nth-child(4){animation-delay:.3s} .dot:nth-child(5){animation-delay:.4s} .dot:nth-child(6){animation-delay:.5s} .dot:nth-child(7){animation-delay:.6s} .dot:nth-child(8){animation-delay:.7s}
+  @keyframes wv { 0% { transform: scale(0); } 50% { transform: scale(1); } 100% { transform: scale(0); } }
+  .lbl { font-size: 11px; color: var(--fg-subtle); font-family: var(--font-mono); }
+  .dk .lbl { color: rgba(226,246,161,0.6); }
+  .cur { display: inline-flex; align-items: baseline; gap: 4px; font-family: var(--font-display); font-size: 28px; font-weight: 500; color: var(--hmn-green); }
+  .cur .c { display: inline-block; width: 2px; height: 26px; background: #0ECB81; animation: blink 1s step-end infinite; transform: translateY(4px); }
+  @keyframes blink { from, to { opacity: 0; } 50% { opacity: 1; } }
+</style></head>
+<body>
+<div class="card">
+  <div class="row" style="justify-content:space-between">
+    <div class="label">Motion · loaders</div>
+    <div class="meta">components</div>
+  </div>
+  <div class="row2">
+    <div class="panel">
+      <div class="wave">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      </div>
+      <span class="lbl">wave · loading state · no spinner</span>
+    </div>
+    <div class="panel dk">
+      <span class="cur">10.68%<span class="c"></span></span>
+      <span class="lbl">live cursor · streaming data</span>
+    </div>
+  </div>
+</div>
+</body></html>

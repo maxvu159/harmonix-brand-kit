@@ -1,0 +1,26 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><title>Elevation</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; padding-top: 4px; }
+  .el { aspect-ratio: 1.2; background: #fff; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
+  .el .n { font-family: var(--font-mono); font-size: 10px; color: var(--fg-subtle); text-transform: uppercase; letter-spacing: 0.04em; }
+  .el .v { font-family: var(--font-mono); font-size: 10px; color: var(--fg-muted); }
+  .glow { background: var(--hmn-green); color: var(--hmn-yellow); }
+  .glow .n, .glow .v { color: var(--hmn-yellow); opacity: 0.7; }
+</style></head>
+<body>
+<div class="card" style="background:#FAFAF8">
+  <div class="row" style="justify-content:space-between">
+    <div class="label">Elevation · drop shadows</div>
+    <div class="meta">spacing</div>
+  </div>
+  <div class="grid4">
+    <div class="el" style="box-shadow: 0 1px 2px rgba(0,0,0,0.05)"><div class="n">xs</div><div class="v">1·2 / 5%</div></div>
+    <div class="el" style="box-shadow: 0 1px 3px rgba(0,0,0,0.06)"><div class="n">sm</div><div class="v">1·3 / 6%</div></div>
+    <div class="el" style="box-shadow: 0 4px 12px rgba(0,0,0,0.06)"><div class="n">md</div><div class="v">4·12 / 6%</div></div>
+    <div class="el glow" style="filter: drop-shadow(0 0 18px rgba(226,246,161,0.6))"><div class="n">glow</div><div class="v">0·86 / yellow</div></div>
+  </div>
+  <div class="meta" style="color:var(--fg-subtle)">Outer only. No inner shadows. "Glow" is drop-shadow (not box-shadow) over partner accents.</div>
+</div>
+</body></html>

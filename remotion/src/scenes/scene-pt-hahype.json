@@ -1,0 +1,15 @@
+{
+  "slug": "pt-hahype-fixed-yield",
+  "asset": "PT-haHYPE",
+  "metric": {
+    "label": "fixed APY",
+    "value": 3.19,
+    "decimals": 2,
+    "unit": "%",
+    "denomination": "HYPE",
+    "note": "Lai suat co dinh neu giu den dao han. Tinh bang HYPE, khong phai USD."
+  },
+  "maturity": { "date": "2027-01-27", "days_from": "2026-09-08", "days": 141 },
+  "source": { "venue": "Pendle", "read_on": "2026-09-08", "method": "doc tay tu giao dien Pendle" },
+  "format": { "width": 2560, "height": 1440, "fps": 30, "duration_s": 14.0 }
+}

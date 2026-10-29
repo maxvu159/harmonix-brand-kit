@@ -1,0 +1,10 @@
+/* shared CSS for both UI kits */
+@import url("../../colors_and_type.css");
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; color: var(--fg); }
+a, button { color: inherit; cursor: pointer; }
+button { background: none; border: 0; padding: 0; font: inherit; }
+img, svg { display: block; max-width: 100%; }
+input { font: inherit; color: inherit; }
+[data-screen-label] { min-height: 100vh; }

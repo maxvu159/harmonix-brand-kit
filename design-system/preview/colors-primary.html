@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><title>Colors · Primary</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .sw { border-radius: var(--radius-md); padding: 14px; height: 132px; display: flex; flex-direction: column; justify-content: space-between; }
+  .sw .name { font-weight: 600; font-size: 13px; }
+  .sw .hex { font-family: var(--font-mono); font-size: 11px; opacity: 0.7; }
+  .sw .role { font-size: 11px; opacity: 0.8; }
+</style></head>
+<body>
+<div class="card">
+  <div class="row" style="justify-content:space-between">
+    <div class="label">Primary palette · brand</div>
+    <div class="meta">colors</div>
+  </div>
+  <div class="swatches">
+    <div class="sw" style="background:#173132;color:#E2F6A1;">
+      <div><div class="name">Green</div><div class="role">primary · ink on light</div></div>
+      <div class="hex">#173132</div>
+    </div>
+    <div class="sw" style="background:#E2F6A1;color:#173132;">
+      <div><div class="name">Yellow</div><div class="role">secondary · CTA accent</div></div>
+      <div class="hex">#E2F6A1</div>
+    </div>
+    <div class="sw" style="background:#F1F1EB;color:#173132;border:1px solid var(--border);">
+      <div><div class="name">Cream</div><div class="role">page bg (marketing)</div></div>
+      <div class="hex">#F1F1EB</div>
+    </div>
+    <div class="sw" style="background:#171918;color:#F1F1EB;">
+      <div><div class="name">Ink</div><div class="role">text on light</div></div>
+      <div class="hex">#171918</div>
+    </div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><title>Colors · Dark surface ladder</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .ladder { display: grid; grid-template-columns: repeat(8, 1fr); gap: 4px; border-radius: var(--radius-md); overflow: hidden; }
+  .step { aspect-ratio: 1; display: flex; flex-direction: column; justify-content: flex-end; padding: 8px; font-family: var(--font-mono); font-size: 9px; }
+  .ll  { letter-spacing: 0.04em; text-transform: uppercase; opacity: 0.7; }
+  .hh  { font-size: 10px; opacity: 0.5; }
+</style></head>
+<body>
+<div class="card dark">
+  <div class="row" style="justify-content:space-between">
+    <div class="label" style="color:rgba(255,255,255,0.6)">Dark surface ladder · g80 → g10</div>
+    <div class="meta">app surfaces</div>
+  </div>
+  <div class="ladder">
+    <div class="step" style="background:#07161D;color:#fff;"><div class="ll">g80</div><div class="hh">07161D</div></div>
+    <div class="step" style="background:#0B1E24;color:#fff;"><div class="ll">g70</div><div class="hh">0B1E24</div></div>
+    <div class="step" style="background:#10272B;color:#fff;"><div class="ll">g60</div><div class="hh">10272B</div></div>
+    <div class="step" style="background:#1D3637;color:#fff;"><div class="ll">g50</div><div class="hh">1D3637</div></div>
+    <div class="step" style="background:#4E8481;color:#fff;"><div class="ll">g40</div><div class="hh">4E8481</div></div>
+    <div class="step" style="background:#CAEAE5;color:#173132;"><div class="ll">g30</div><div class="hh">CAEAE5</div></div>
+    <div class="step" style="background:#DAF4EC;color:#173132;"><div class="ll">g10</div><div class="hh">DAF4EC</div></div>
+    <div class="step" style="background:#F5F6F6;color:#173132;"><div class="ll">grey01</div><div class="hh">F5F6F6</div></div>
+  </div>
+  <div class="meta" style="color:rgba(255,255,255,0.4)">deeper = lower z-elevation · sidebar uses g80, info cards g70, hover g60</div>
+</div>
+</body></html>

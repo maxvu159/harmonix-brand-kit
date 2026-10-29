@@ -1,0 +1,33 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><title>Colors · Brand blend gradient</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .demo { height: 200px; border-radius: var(--radius-lg); overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; }
+  .blend {
+    background:
+      linear-gradient(300deg, rgba(241,240,235,0.5) 7.75%, rgba(88,191,110,0.5) 92.25%),
+      linear-gradient(300deg, rgba(241,240,235,0.5) 7.75%, rgba(226,246,161,0.5) 92.25%),
+      #F1F1EB;
+    background-blend-mode: soft-light, hue, normal;
+  }
+  .demo h2 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 36px;
+    color: var(--hmn-green);
+    letter-spacing: -0.02em;
+  }
+  .recipe { font-family: var(--font-mono); font-size: 10px; color: var(--fg-subtle); line-height: 1.5; }
+</style></head>
+<body>
+<div class="card">
+  <div class="row" style="justify-content:space-between">
+    <div class="label">Brand blend background · marketing</div>
+    <div class="meta">colors</div>
+  </div>
+  <div class="demo blend">
+    <h2>Reshaping Yield</h2>
+  </div>
+  <div class="recipe">linear(300°, cream/.5 → leaf/.5) + linear(300°, cream/.5 → yellow/.5), blend-mode: soft-light, hue · base #F1F1EB</div>
+</div>
+</body></html>

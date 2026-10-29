@@ -1,0 +1,296 @@
+/* harmonix-web — light marketing styles */
+@import url("../_kit.css");
+
+body {
+  background: var(--hmn-cream);
+  color: var(--hmn-ink);
+  font-family: "Aeonik", "Poppins", system-ui, sans-serif;
+}
+
+/* ---------- Navbar ---------- */
+.nav-wrap { position: sticky; top: 0; z-index: 50; padding: 20px 24px 0; }
+.nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 9999px;
+  padding: 10px 12px 10px 22px;
+  display: flex; align-items: center; justify-content: space-between;
+  box-shadow: 0 4px 24px rgba(23,49,50,0.06);
+}
+.nav .brand img { height: 36px; }
+.nav .links { display: flex; gap: 6px; }
+.nav .link {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  color: var(--hmn-ink);
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-flex; align-items: center; gap: 4px;
+  transition: background .2s;
+}
+.nav .link:hover { background: var(--hmn-yellow-soft); }
+.nav .cta {
+  padding: 8px 22px;
+  border-radius: 9999px;
+  background: transparent;
+  border: 1px solid var(--hmn-ink);
+  color: var(--hmn-ink);
+  font-size: 14px;
+  font-weight: 400;
+  transition: all .2s;
+}
+.nav .cta:hover { background: var(--hmn-yellow); border-color: var(--hmn-yellow); }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  padding: 88px 24px 120px;
+  text-align: center;
+  overflow: hidden;
+  background:
+    linear-gradient(300deg, rgba(241,240,235,0.5) 7.75%, rgba(88,191,110,0.5) 92.25%),
+    linear-gradient(300deg, rgba(241,240,235,0.5) 7.75%, rgba(226,246,161,0.5) 92.25%),
+    var(--hmn-cream);
+  background-blend-mode: soft-light, hue, normal;
+}
+.hero-inner { position: relative; max-width: 920px; margin: 0 auto; }
+.hero h1 {
+  font: 600 64px/1.05 "Aeonik";
+  color: var(--hmn-green);
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+.hero .sub {
+  font: 300 24px/1.4 "Aeonik";
+  color: var(--hmn-green);
+  margin-bottom: 28px;
+  opacity: 0.85;
+}
+.hero .launch {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 16px 34px;
+  background: var(--hmn-yellow);
+  color: var(--hmn-green);
+  border-radius: 9999px;
+  font: 500 17px "Aeonik";
+  box-shadow: 0 2px 12px rgba(23,49,50,0.10);
+  transition: transform .2s, box-shadow .2s;
+}
+.hero .launch:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(23,49,50,0.15); }
+.hero .meta-badge {
+  position: absolute;
+  left: 50%; bottom: 30px; transform: translateX(-50%);
+  display: flex; align-items: center; gap: 10px;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.6);
+  padding: 8px 16px 8px 8px;
+  border-radius: 9999px;
+  font-size: 13px;
+  color: var(--hmn-green);
+}
+.hero .meta-badge .ic {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--hmn-green);
+  color: var(--hmn-yellow);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 600;
+}
+.hero .meta-badge b { color: var(--hmn-green); font-weight: 600; font-family: var(--font-mono); }
+
+.subtract {
+  position: absolute; left: 50%; bottom: -120px;
+  transform: translateX(-50%);
+  width: min(1097px, 90vw); height: auto;
+  pointer-events: none;
+  opacity: 0.7;
+  mix-blend-mode: soft-light;
+}
+
+/* ---------- Earn section ---------- */
+.earn-section { padding: 110px 24px; background: white; color: var(--hmn-ink); }
+.earn-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.steps { display: flex; flex-direction: column; gap: 24px; padding-left: 40px; }
+.step { display: flex; gap: 22px; align-items: flex-start; position: relative; }
+.step .n {
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: var(--hmn-zinc-100);
+  display: flex; align-items: center; justify-content: center;
+  font: 400 22px/1 "Aeonik"; color: var(--hmn-ink);
+  flex-shrink: 0;
+  transition: all .25s;
+  cursor: pointer;
+}
+.step.active .n {
+  background: var(--hmn-yellow);
+  transform: scale(1.05);
+}
+.step .label {
+  font: 400 44px/1 "Aeonik";
+  color: var(--hmn-ink);
+  opacity: 0.6;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: opacity .25s;
+}
+.step.active .label { display: none; }
+.step.active .body {
+  display: flex; flex-direction: column; gap: 14px;
+}
+.step .body { display: none; }
+.step.active .body h2 { font: 500 38px/1.1 "Aeonik"; }
+.step.active .body p { font: 400 18px/1.5 "Aeonik"; color: var(--fg-muted); max-width: 440px; }
+.step .body .btn-prim {
+  margin-top: 8px;
+  align-self: flex-start;
+  padding: 12px 24px;
+  background: var(--hmn-green);
+  color: white;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all .2s;
+}
+.step .body .btn-prim:hover { background: var(--hmn-yellow); color: var(--hmn-green); }
+.step .line {
+  position: absolute; left: 22px; top: 50px; width: 1px; height: calc(100% + 14px);
+  background: linear-gradient(180deg, var(--hmn-mint), var(--hmn-yellow));
+  display: none;
+}
+.step.active .line { display: block; }
+.step:last-child .line { display: none !important; }
+
+.earn-card {
+  background: var(--hmn-yellow-soft);
+  border-radius: 24px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  min-height: 480px;
+  display: flex; flex-direction: column; gap: 20px;
+}
+.earn-card .head { display: flex; justify-content: space-between; align-items: start; }
+.earn-card .head .lbl { font-size: 12px; color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.earn-card .head .val { font: 500 64px/1 "Aeonik"; color: var(--hmn-green); letter-spacing: -0.02em; margin-top: 6px; font-variant-numeric: tabular-nums; }
+.earn-card .head .small { font-size: 14px; color: var(--fg-muted); }
+.earn-card .pill { display: inline-flex; padding: 6px 12px; background: white; border-radius: 9999px; font-size: 12px; font-weight: 500; color: var(--hmn-green); }
+.earn-card .strategy-list { display: flex; flex-direction: column; gap: 10px; margin-top: auto; }
+.earn-card .sr { background: white; border-radius: 12px; padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; }
+.earn-card .sr .nm { font-weight: 500; color: var(--hmn-ink); }
+.earn-card .sr .ap { font-family: var(--font-mono); color: #0A6F46; font-weight: 600; }
+
+/* ---------- Core technology ---------- */
+.core-section {
+  padding: 120px 24px;
+  background:
+    linear-gradient(300deg, rgba(241,240,235,0.5) 7.75%, rgba(226,246,161,0.5) 92.25%),
+    var(--hmn-cream);
+  background-blend-mode: soft-light, normal;
+}
+.core-section h2 { font: 500 64px/1 "Aeonik"; color: var(--hmn-green); text-align: center; margin-bottom: 80px; letter-spacing: -0.02em; }
+.core-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.core-card {
+  background: white;
+  border-radius: 24px;
+  padding: 32px 28px;
+  display: flex; flex-direction: column; gap: 16px;
+  box-shadow: 0 4px 16px rgba(23,49,50,0.04);
+}
+.core-card.shift { transform: translateY(-32px); }
+.core-card .ic {
+  width: 72px; height: 72px; border-radius: 16px;
+  background: var(--hmn-yellow-soft);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--hmn-green);
+}
+.core-card .ic svg { width: 40px; height: 40px; }
+.core-card h3 { font: 600 24px "Aeonik"; color: var(--hmn-ink); }
+.core-card p  { font: 300 16px/1.6 "Aeonik"; color: var(--fg-muted); }
+
+/* ---------- Partner section ---------- */
+.partner-section { padding: 110px 24px; background: white; }
+.partner-section h2 { font: 500 56px "Aeonik"; color: var(--hmn-ink); text-align: center; margin-bottom: 14px; letter-spacing: -0.02em; }
+.partner-section .sub { text-align: center; color: var(--fg-muted); font-size: 18px; margin-bottom: 60px; }
+.partner-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; }
+.partner {
+  aspect-ratio: 1.4;
+  background: var(--hmn-cream);
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--hmn-green);
+  font-weight: 500;
+  font-size: 15px;
+  transition: all .25s;
+}
+.partner:hover { background: var(--hmn-yellow); transform: translateY(-4px); }
+
+/* ---------- FAQ section ---------- */
+.faq-section { padding: 110px 24px; background: white; }
+.faq-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.faq-grid h2 { font: 500 64px "Outfit", "Aeonik"; color: var(--hmn-green); letter-spacing: -0.02em; }
+.faq-grid .ttl-block p { font: 400 24px "Aeonik"; color: var(--hmn-ink); margin: 24px 0; }
+.faq-grid .btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  background: var(--hmn-green);
+  color: white;
+  font-weight: 500;
+}
+.faq-grid .btn-ghost:hover { background: var(--hmn-yellow); color: var(--hmn-green); }
+.faq-list { display: flex; flex-direction: column; gap: 10px; }
+.faq-item {
+  background: rgba(237,249,242,0.3);
+  border: 1px solid var(--hmn-cream);
+  border-radius: 24px;
+  padding: 14px 22px;
+  transition: background .2s;
+}
+.faq-item:hover { background: rgba(237,249,242,0.6); }
+.faq-head { display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 10px 0; }
+.faq-head .q { font: 400 18px "Aeonik"; color: var(--hmn-green); }
+.faq-head .ic { width: 24px; height: 24px; color: var(--hmn-green); transition: transform .25s; }
+.faq-item.open .faq-head .ic { transform: rotate(45deg); }
+.faq-body { font: 400 16px/1.6 "Lato", "Aeonik", sans-serif; color: var(--fg-muted); padding: 8px 0 14px; display: none; }
+.faq-item.open .faq-body { display: block; }
+
+/* ---------- Footer ---------- */
+.footer {
+  position: relative; overflow: hidden;
+  padding: 64px 32px 24px;
+  background:
+    linear-gradient(300deg, rgba(241,240,235,0.5) 7.75%, rgba(88,191,110,0.5) 92.25%),
+    linear-gradient(300deg, rgba(241,240,235,0.5) 7.75%, rgba(226,246,161,0.5) 92.25%),
+    var(--hmn-cream);
+  background-blend-mode: soft-light, hue, normal;
+  color: var(--hmn-ink);
+}
+.footer-grid { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 5fr 7fr; gap: 80px; }
+.footer-grid img { height: 64px; margin-bottom: 22px; }
+.footer-grid h3 { font: 300 24px "Aeonik"; max-width: 320px; }
+.footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.footer-col h4 { font: 300 20px "Aeonik"; margin-bottom: 22px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+.footer-col a { color: var(--hmn-ink); font: 300 18px "Aeonik"; display: inline-flex; align-items: center; gap: 8px; transition: opacity .2s; }
+.footer-col a:hover { opacity: 0.7; }
+.brand-text {
+  text-align: center;
+  font: 500 13vw/1 "Aeonik";
+  color: var(--hmn-green);
+  letter-spacing: -0.03em;
+  margin-top: 56px;
+  opacity: 0.95;
+}
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  max-width: 1280px; margin: 24px auto 0;
+  font-size: 13px; color: var(--hmn-ink);
+}
+.back-top {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--hmn-green); color: var(--hmn-yellow);
+  display: flex; align-items: center; justify-content: center;
+}
+.back-top:hover { background: var(--hmn-yellow); color: var(--hmn-green); }

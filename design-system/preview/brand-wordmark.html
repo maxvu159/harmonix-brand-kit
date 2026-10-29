@@ -1,0 +1,28 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><title>Brand · Wordmark</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .slab { padding: 26px 28px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; }
+  .light { background: #fff; border: 1px solid var(--border); }
+  .cream { background: var(--hmn-cream); }
+  .dark  { background: var(--hmn-green); }
+  img.wm { height: 36px; width: auto; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+</style></head>
+<body>
+<div class="card">
+  <div class="row" style="justify-content:space-between">
+    <div class="label">Wordmark · "harmonix" with glyph</div>
+    <div class="meta">brand</div>
+  </div>
+  <div class="grid2">
+    <div class="slab light"><img class="wm" src="../assets/logos/harmonix-wordmark.svg"/></div>
+    <div class="slab cream"><img class="wm" src="../assets/logos/harmonix-wordmark.svg"/></div>
+    <div class="slab dark"><img class="wm" src="../assets/logos/HMN-Logo-white.svg" style="height:24px"/></div>
+    <div class="slab dark"><img class="wm" src="../assets/logos/HMN-Logo-yellow.svg" style="height:24px"/></div>
+  </div>
+  <div class="row" style="gap:18px">
+    <div class="meta">min-height 24px · always keep glyph + wordmark</div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,49 @@
+{
+  "name": "Harmonix",
+  "wordmark": "Harmonix",
+  "colors": {
+    "bg": "#0F2122",
+    "surface": "#0B1E24",
+    "surface2": "#10272B",
+    "line": "#25403F",
+    "text": "#FAFAFA",
+    "dim": "#8FA3A6",
+    "dim2": "#5E7476",
+    "accent": "#E2F6A1",
+    "accentInk": "#173132",
+    "positive": "#0ECB81",
+    "negative": "#F26D71",
+    "warn": "#F5C26B"
+  },
+  "type": {
+    "family": "Aeonik",
+    "files": [
+      { "weight": 300, "file": "design-system/fonts/Aeonik-Light.otf" },
+      { "weight": 400, "file": "design-system/fonts/Aeonik-Regular.otf" },
+      { "weight": 500, "file": "design-system/fonts/Aeonik-Medium.otf" },
+      { "weight": 700, "file": "design-system/fonts/Aeonik-Bold.otf" }
+    ],
+    "displayWeight": 500,
+    "displayTracking": "-0.03em",
+    "labelTracking": "0.1em"
+  },
+  "radii": { "card": 16, "hero": 32, "pill": 9999 },
+  "motion": { "ease": [0.16, 1, 0.3, 1], "easeData": [0.45, 0.5, 0.0, 0.8], "springs": false },
+  "logo": { "mark": "logos/harmonix/hmn-circle-green.svg", "wordmark": "logos/harmonix/hmn-wordmark-white.svg" },
+  "background": {
+    "type": "mesh",
+    "mesh": [
+      ["#05203A", "#06364A", "#084C4C", "#0C7C72", "#15957E"],
+      ["#041A30", "#052C3E", "#073E42", "#0A7A68", "#1FA184"],
+      ["#04192C", "#052836", "#063C3C", "#108C70", "#2BB187"],
+      ["#051C2E", "#062E3A", "#07423E", "#0E8468", "#23A87E"],
+      ["#031428", "#042630", "#053836", "#0B7660", "#189A74"]
+    ],
+    "grain": 8
+  },
+  "rules": {
+    "do": ["Lime (#E2F6A1) only for the primary action and one highlight per frame", "Aeonik everywhere, numbers tabular", "Harmonix logo top-left on stat cards"],
+    "dont": ["No springs or bounce on UI", "No pure black backgrounds", "No claims that are not in the content source"],
+    "claimsSource": null
+  }
+}

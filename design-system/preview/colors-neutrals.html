@@ -1,0 +1,27 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><title>Colors · Neutrals</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .ladder { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; border-radius: var(--radius-md); overflow: hidden; }
+  .step { aspect-ratio: 1; display: flex; flex-direction: column; justify-content: flex-end; padding: 8px; font-family: var(--font-mono); font-size: 9px; }
+  .ll  { letter-spacing: 0.04em; text-transform: uppercase; opacity: 0.65; font-weight: 500; }
+  .hh  { font-size: 10px; opacity: 0.5; }
+</style></head>
+<body>
+<div class="card">
+  <div class="row" style="justify-content:space-between">
+    <div class="label">Neutral ladder · zinc</div>
+    <div class="meta">colors</div>
+  </div>
+  <div class="ladder">
+    <div class="step" style="background:#FFFFFF;color:#173132;border:1px solid var(--border);"><div class="ll">white</div><div class="hh">FFFFFF</div></div>
+    <div class="step" style="background:#F5F6F6;color:#173132;"><div class="ll">100</div><div class="hh">F5F6F6</div></div>
+    <div class="step" style="background:#F4F4F5;color:#173132;"><div class="ll">200</div><div class="hh">F4F4F5</div></div>
+    <div class="step" style="background:#E4E4E7;color:#173132;"><div class="ll">300</div><div class="hh">E4E4E7</div></div>
+    <div class="step" style="background:#84889A;color:#fff;"><div class="ll">400</div><div class="hh">84889A</div></div>
+    <div class="step" style="background:#71717A;color:#fff;"><div class="ll">500</div><div class="hh">71717A</div></div>
+    <div class="step" style="background:#27272A;color:#fff;"><div class="ll">800</div><div class="hh">27272A</div></div>
+  </div>
+  <div class="meta">300 borders · 400 sub-titles · 500 grey-02 captions · 800 dark surfaces</div>
+</div>
+</body></html>

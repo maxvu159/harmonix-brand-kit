@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=1280"/>
+<title>Harmonix · App UI kit</title>
+<link rel="icon" href="../../assets/logos/hmn-logo-square-yellow.svg"/>
+<link rel="stylesheet" href="app.css"/>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" src="components/Shell.jsx"></script>
+<script type="text/babel" src="components/ScreenYieldMarkets.jsx"></script>
+<script type="text/babel" src="components/ScreenVaultDetail.jsx"></script>
+<script type="text/babel" src="components/ScreenPortfolio.jsx"></script>
+
+<script type="text/babel">
+const { useState } = React;
+
+function App() {
+  const [route, setRoute]     = useState({ screen: "yield" });
+  const [connected, setConn]  = useState(true);
+  const [toast, setToast]     = useState(null);
+
+  function showToast(msg) {
+    setToast(msg);
+    clearTimeout(showToast.t);
+    showToast.t = setTimeout(() => setToast(null), 2400);
+  }
+
+  const onNav = (key) => setRoute({ screen: key });
+
+  const onOpenVault = (vault) => setRoute({ screen: "vault", vault });
+
+  const onDeposit = (amount, vault) => {
+    showToast(`Deposit confirmed — ${amount} USDC into ${vault.name}`);
+  };
+
+  let body, title, crumbs;
+  if (route.screen === "yield") {
+    title = "Yield Markets"; crumbs = "Products · Yield Markets";
+    body = <ScreenYieldMarkets onOpenVault={onOpenVault}/>;
+  } else if (route.screen === "vault") {
+    title = route.vault.name; crumbs = `Yield Markets · ${route.vault.sub}`;
+    body = <ScreenVaultDetail vault={route.vault} onBack={() => setRoute({screen:"yield"})} onDeposit={onDeposit}/>;
+  } else if (route.screen === "portfolio") {
+    title = "Portfolio"; crumbs = "Stats · Portfolio";
+    body = <ScreenPortfolio onOpenVault={onOpenVault}/>;
+  } else if (route.screen === "swap") {
+    title = "Swap"; crumbs = "Products · Swap";
+    body = <ScreenSwap/>;
+  } else {
+    title = title || (route.screen[0].toUpperCase() + route.screen.slice(1));
+    crumbs = "Products";
+    body = (
+      <div className="section-card" style={{textAlign:"center", padding:"80px 40px"}}>
+        <div style={{fontSize:48, marginBottom:14}}>🛠</div>
+        <h3 style={{color:"white", fontSize:20, marginBottom:8}}>{title}</h3>
+        <p style={{color:"rgba(255,255,255,0.5)"}}>This surface lives in the Harmonix app; we've focused this kit on Yield Markets, Vault Detail, Portfolio & Swap.</p>
+      </div>
+    );
+  }
+
+  // Map vault route back to "yield" active state in sidebar
+  const activeKey = route.screen === "vault" ? "yield" : route.screen;
+
+  return (
+    <div className="app-shell">
+      <Sidebar active={activeKey} onNav={onNav}/>
+      <div className="main">
+        <TopBar title={title} crumbs={crumbs} walletConnected={connected} onConnect={() => { setConn(true); showToast("Wallet connected"); }}/>
+        <div className="content" data-screen-label={`App · ${title}`}>{body}</div>
+      </div>
+      {toast && <div className="toast"><span className="dot"></span>{toast}</div>}
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>
